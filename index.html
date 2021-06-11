@@ -6,44 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakelicious</title>
 
+    <link rel="icon" href="img/logo.jpg">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Food<span>.</span></a>
+        <a href="#" class="logo">Bakelicious</a>
         <div class="sidebar" onclick="toggleMenu();"></div>
         <ul class="navi">
-            <li><a href="#banner">Home</a></li>
-            <li><a href="#menu">Specials</a></li>
-            <li><a href="#menu1">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Specials</a></li>
+            <li><a href="#menu1" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
     <section class="banner" id="banner">
         <div class="content">
-            <h2>Always choose Good</h2>
+            <h2>Bakelicious</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Temporibus atque quasi cupiditate aspernatur laborum dicta facilis ipsam.
+                Welcome You
             </p>
-            <a href="#" class="btn">
+            <a href="#menu" class="btn">
                 Our Menu
             </a>
         </div>
     </section>
     <section class="about" id="about">
         <div class="row">
+            
             <div class="col50">
                 <h2 class="titletext"><span>A</span>Bout Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit, eveniet temporibus distinctio architecto possimus modi, ut reprehenderit nemo tempore laboriosam dolor beatae debitis ex quasi expedita similique voluptates error.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aliquam blanditiis magni voluptatem possimus corporis totam dolore in doloribus debitis id, ullam dolorum inventore! Necessitatibus adipisci reprehenderit nihil neque. Exercitationem?
+                <p>Established on the principles of quality and efficiency, 
+                    <b>Bakelicious</b>, is an emerging cake maker in Trivandrum city. Led by a highly experienced leadership team,
+                    the company will steadily expand to have a pan India presence.
+                    Bakelicious focuses on the consumer and the business-to-business market.
+                    Our commitment to customer satisfaction is foremost. We are dedicated to provide exceptional service and product. 
+                    Our core values are; high supply reliability, consistent high quality, constant smart innovations and short product development cycle.
                 </p>
             </div>
             <div class="col50">
                 <div class="imgBx">
-                    <img src="img/img1.jpg" alt="">
+                    <img src="img/logo.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -59,7 +65,7 @@
         <div class="content">
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/chocklate.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Basics</h3>
@@ -67,7 +73,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/rainbow.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Premium</h3>
@@ -75,17 +81,17 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/blue.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Delights</h3>
                 </div>
             </div>
-        </div>
-        <div class="content">
+        <!-- </div>
+        <div class="content"> -->
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/butter.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Milkcake</h3>
@@ -93,7 +99,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/fusion.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Fusion</h3>
@@ -101,7 +107,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <img src="img/menu1.jpg" alt="">
+                    <img src="img/mango.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>New Arrivals</h3>
@@ -200,7 +206,9 @@
         function toggleMenu()
         {
             const menuToggle = document.querySelector('.sidebar');
+            const navigation = document.querySelector('.navi');
             menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
         }
     </script>
 </body>

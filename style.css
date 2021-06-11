@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 *
 {
     margin: 0;
@@ -34,8 +35,10 @@ p{
 }
 .banner .content p
 {
-    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
     color: #fff;
+    transform: rotate(354deg);
 }
 .btn
 {
@@ -75,9 +78,10 @@ header.sticky
 }
 header .logo
 {
+    font-family: 'Dancing Script', cursive;
     color: #fff;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 3em;
     text-decoration: none;
 }
 header.sticky .logo
@@ -92,6 +96,7 @@ header .navi
 {
     position: relative;
     display: flex;
+    font-size: 1.5em;
 }
 header .navi li
 {
@@ -121,12 +126,13 @@ section
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
 .row .col50
 {
     position: relative;
-    width: 48%;
+    width: 30%;
 }
 .titletext
 {
@@ -153,7 +159,7 @@ section
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .title
@@ -267,11 +273,53 @@ section
     text-decoration: none;
     font-weight: 400;
 }
+#menu
+{
+    padding: 10px;
+}
 
 
 
+@media(max-width:1566px)
+{
+    .row .col50 {
+        width: 35%;
+    }
+}
 
+@media(max-width:1375px)
+{
+    .row .col50 {
+        width: 40%;
+    }
+}
+@media(max-width:1250px)
+{
+    .row .col50 {
+        width: 50%;
+    }
+}
 
+@media(max-width:1024px)
+{
+    .row .col50 {
+        width: 75%;
+    }
+    .row
+    {
+        flex-direction: column-reverse;
+    }
+    .row .col50
+    {
+        position: relative;
+        width: 100%;
+    }
+    .row .col50 .imgBx
+    {
+        height: 300px;
+        margin-top: 20px;
+    }
+}
 
 @media(max-width:991px)
 {
@@ -283,6 +331,28 @@ section
     header .navi
     {
         display: none;
+    }
+    header .navi.active
+    {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navi li
+    {
+        margin-left: 0;
+    }
+    header .navi li a
+    {
+        color: #111;
+        font-size: 1.6em;
     }
     .sidebar
     {
