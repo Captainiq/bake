@@ -273,7 +273,7 @@ section
     text-decoration: none;
     font-weight: 400;
 }
-#menu
+#menu, #menu1
 {
     padding: 10px;
 }
@@ -375,5 +375,24 @@ section
     header.sticky .sidebar
     {
         filter: invert(1);
+    }
+    .banner .content {
+        max-width: 900px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .content h2 {
+        font-size: 3rem;
+        color: #fff;
+    }
+    .titletext {
+        text-align: center;
+    }
+    p {
+        text-align: center;
     }
 }
